@@ -1,0 +1,9 @@
+{
+  "giaDien": 3800,
+  "extraFeesDefault": [
+    {
+      "name": "Phí sinh hoạt mỗi phòng",
+      "amount": 150000
+    }
+  ]
+}

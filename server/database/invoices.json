@@ -1,0 +1,2078 @@
+[
+  {
+    "_id": "66b000000000000000001001",
+    "roomId": "66b000000000000000000001",
+    "month": "2026-08",
+    "oldReading": 0,
+    "newReading": 99380,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": true,
+    "paidDate": "2026-08-11T08:56:32.171Z"
+  },
+  {
+    "_id": "66b000000000000000001002",
+    "roomId": "66b000000000000000000002",
+    "month": "2026-08",
+    "oldReading": 200,
+    "newReading": 245,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "66b000000000000000001003",
+    "roomId": "66b000000000000000000003",
+    "month": "2026-08",
+    "oldReading": 300,
+    "newReading": 345,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt",
+        "amount": 150000
+      }
+    ],
+    "paid": true,
+    "paidDate": "2026-08-18T04:28:30.240Z"
+  },
+  {
+    "_id": "66b000000000000000001004",
+    "roomId": "66b000000000000000000004",
+    "month": "2026-08",
+    "oldReading": 400,
+    "newReading": 445,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "66b000000000000000001005",
+    "roomId": "66b000000000000000000005",
+    "month": "2026-08",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 150000
+      }
+    ],
+    "paid": true,
+    "paidDate": "2026-08-18T04:43:25.794Z"
+  },
+  {
+    "_id": "66b000000000000000001006",
+    "roomId": "66b000000000000000000006",
+    "month": "2026-08",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 150000
+      }
+    ],
+    "paid": true,
+    "paidDate": "2026-08-11T08:58:33.679Z"
+  },
+  {
+    "_id": "66b000000000000000001007",
+    "roomId": "66b000000000000000000007",
+    "month": "2026-08",
+    "oldReading": 700,
+    "newReading": 745,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "66b000000000000000001008",
+    "roomId": "66b000000000000000000008",
+    "month": "2026-08",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "66b000000000000000001009",
+    "roomId": "66b000000000000000000009",
+    "month": "2026-08",
+    "oldReading": 900,
+    "newReading": 945,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "66b0000000000000000010010",
+    "roomId": "66b000000000000000000010",
+    "month": "2026-08",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "66b0000000000000000010011",
+    "roomId": "66b000000000000000000011",
+    "month": "2026-08",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "66b0000000000000000010012",
+    "roomId": "66b000000000000000000012",
+    "month": "2026-08",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000001_2026-09",
+    "roomId": "66b000000000000000000001",
+    "month": "2026-09",
+    "oldReading": 99380,
+    "newReading": 99390,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000002_2026-09",
+    "roomId": "66b000000000000000000002",
+    "month": "2026-09",
+    "oldReading": 245,
+    "newReading": 245,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000003_2026-09",
+    "roomId": "66b000000000000000000003",
+    "month": "2026-09",
+    "oldReading": 345,
+    "newReading": 345,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000004_2026-09",
+    "roomId": "66b000000000000000000004",
+    "month": "2026-09",
+    "oldReading": 445,
+    "newReading": 445,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000005_2026-09",
+    "roomId": "66b000000000000000000005",
+    "month": "2026-09",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000006_2026-09",
+    "roomId": "66b000000000000000000006",
+    "month": "2026-09",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000007_2026-09",
+    "roomId": "66b000000000000000000007",
+    "month": "2026-09",
+    "oldReading": 745,
+    "newReading": 745,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000008_2026-09",
+    "roomId": "66b000000000000000000008",
+    "month": "2026-09",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000009_2026-09",
+    "roomId": "66b000000000000000000009",
+    "month": "2026-09",
+    "oldReading": 945,
+    "newReading": 945,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000010_2026-09",
+    "roomId": "66b000000000000000000010",
+    "month": "2026-09",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000011_2026-09",
+    "roomId": "66b000000000000000000011",
+    "month": "2026-09",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000012_2026-09",
+    "roomId": "66b000000000000000000012",
+    "month": "2026-09",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000001_2026-07",
+    "roomId": "66b000000000000000000001",
+    "month": "2026-07",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000002_2026-07",
+    "roomId": "66b000000000000000000002",
+    "month": "2026-07",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000003_2026-07",
+    "roomId": "66b000000000000000000003",
+    "month": "2026-07",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000004_2026-07",
+    "roomId": "66b000000000000000000004",
+    "month": "2026-07",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000005_2026-07",
+    "roomId": "66b000000000000000000005",
+    "month": "2026-07",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000006_2026-07",
+    "roomId": "66b000000000000000000006",
+    "month": "2026-07",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000007_2026-07",
+    "roomId": "66b000000000000000000007",
+    "month": "2026-07",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000008_2026-07",
+    "roomId": "66b000000000000000000008",
+    "month": "2026-07",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000009_2026-07",
+    "roomId": "66b000000000000000000009",
+    "month": "2026-07",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000010_2026-07",
+    "roomId": "66b000000000000000000010",
+    "month": "2026-07",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000011_2026-07",
+    "roomId": "66b000000000000000000011",
+    "month": "2026-07",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000012_2026-07",
+    "roomId": "66b000000000000000000012",
+    "month": "2026-07",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Rác sinh hoạt",
+        "amount": 30000
+      },
+      {
+        "name": "Internet / Wifi",
+        "amount": 100000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000001_2026-06",
+    "roomId": "66b000000000000000000001",
+    "month": "2026-06",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000002_2026-06",
+    "roomId": "66b000000000000000000002",
+    "month": "2026-06",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000003_2026-06",
+    "roomId": "66b000000000000000000003",
+    "month": "2026-06",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000004_2026-06",
+    "roomId": "66b000000000000000000004",
+    "month": "2026-06",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000005_2026-06",
+    "roomId": "66b000000000000000000005",
+    "month": "2026-06",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000006_2026-06",
+    "roomId": "66b000000000000000000006",
+    "month": "2026-06",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000007_2026-06",
+    "roomId": "66b000000000000000000007",
+    "month": "2026-06",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000008_2026-06",
+    "roomId": "66b000000000000000000008",
+    "month": "2026-06",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000009_2026-06",
+    "roomId": "66b000000000000000000009",
+    "month": "2026-06",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000010_2026-06",
+    "roomId": "66b000000000000000000010",
+    "month": "2026-06",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000011_2026-06",
+    "roomId": "66b000000000000000000011",
+    "month": "2026-06",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000012_2026-06",
+    "roomId": "66b000000000000000000012",
+    "month": "2026-06",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000001_2026-05",
+    "roomId": "66b000000000000000000001",
+    "month": "2026-05",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000002_2026-05",
+    "roomId": "66b000000000000000000002",
+    "month": "2026-05",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000003_2026-05",
+    "roomId": "66b000000000000000000003",
+    "month": "2026-05",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000004_2026-05",
+    "roomId": "66b000000000000000000004",
+    "month": "2026-05",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000005_2026-05",
+    "roomId": "66b000000000000000000005",
+    "month": "2026-05",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000006_2026-05",
+    "roomId": "66b000000000000000000006",
+    "month": "2026-05",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000007_2026-05",
+    "roomId": "66b000000000000000000007",
+    "month": "2026-05",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000008_2026-05",
+    "roomId": "66b000000000000000000008",
+    "month": "2026-05",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000009_2026-05",
+    "roomId": "66b000000000000000000009",
+    "month": "2026-05",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000010_2026-05",
+    "roomId": "66b000000000000000000010",
+    "month": "2026-05",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000011_2026-05",
+    "roomId": "66b000000000000000000011",
+    "month": "2026-05",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000012_2026-05",
+    "roomId": "66b000000000000000000012",
+    "month": "2026-05",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000001_2026-04",
+    "roomId": "66b000000000000000000001",
+    "month": "2026-04",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000002_2026-04",
+    "roomId": "66b000000000000000000002",
+    "month": "2026-04",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000003_2026-04",
+    "roomId": "66b000000000000000000003",
+    "month": "2026-04",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000004_2026-04",
+    "roomId": "66b000000000000000000004",
+    "month": "2026-04",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000005_2026-04",
+    "roomId": "66b000000000000000000005",
+    "month": "2026-04",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000006_2026-04",
+    "roomId": "66b000000000000000000006",
+    "month": "2026-04",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000007_2026-04",
+    "roomId": "66b000000000000000000007",
+    "month": "2026-04",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000008_2026-04",
+    "roomId": "66b000000000000000000008",
+    "month": "2026-04",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000009_2026-04",
+    "roomId": "66b000000000000000000009",
+    "month": "2026-04",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000010_2026-04",
+    "roomId": "66b000000000000000000010",
+    "month": "2026-04",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000011_2026-04",
+    "roomId": "66b000000000000000000011",
+    "month": "2026-04",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000012_2026-04",
+    "roomId": "66b000000000000000000012",
+    "month": "2026-04",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000001_2026-03",
+    "roomId": "66b000000000000000000001",
+    "month": "2026-03",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000002_2026-03",
+    "roomId": "66b000000000000000000002",
+    "month": "2026-03",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000003_2026-03",
+    "roomId": "66b000000000000000000003",
+    "month": "2026-03",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000004_2026-03",
+    "roomId": "66b000000000000000000004",
+    "month": "2026-03",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000005_2026-03",
+    "roomId": "66b000000000000000000005",
+    "month": "2026-03",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000006_2026-03",
+    "roomId": "66b000000000000000000006",
+    "month": "2026-03",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000007_2026-03",
+    "roomId": "66b000000000000000000007",
+    "month": "2026-03",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000008_2026-03",
+    "roomId": "66b000000000000000000008",
+    "month": "2026-03",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000009_2026-03",
+    "roomId": "66b000000000000000000009",
+    "month": "2026-03",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000010_2026-03",
+    "roomId": "66b000000000000000000010",
+    "month": "2026-03",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000011_2026-03",
+    "roomId": "66b000000000000000000011",
+    "month": "2026-03",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000012_2026-03",
+    "roomId": "66b000000000000000000012",
+    "month": "2026-03",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000001_2026-02",
+    "roomId": "66b000000000000000000001",
+    "month": "2026-02",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000002_2026-02",
+    "roomId": "66b000000000000000000002",
+    "month": "2026-02",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000003_2026-02",
+    "roomId": "66b000000000000000000003",
+    "month": "2026-02",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000004_2026-02",
+    "roomId": "66b000000000000000000004",
+    "month": "2026-02",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000005_2026-02",
+    "roomId": "66b000000000000000000005",
+    "month": "2026-02",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000006_2026-02",
+    "roomId": "66b000000000000000000006",
+    "month": "2026-02",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000007_2026-02",
+    "roomId": "66b000000000000000000007",
+    "month": "2026-02",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000008_2026-02",
+    "roomId": "66b000000000000000000008",
+    "month": "2026-02",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000009_2026-02",
+    "roomId": "66b000000000000000000009",
+    "month": "2026-02",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000010_2026-02",
+    "roomId": "66b000000000000000000010",
+    "month": "2026-02",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000011_2026-02",
+    "roomId": "66b000000000000000000011",
+    "month": "2026-02",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000012_2026-02",
+    "roomId": "66b000000000000000000012",
+    "month": "2026-02",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000001_2026-01",
+    "roomId": "66b000000000000000000001",
+    "month": "2026-01",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000002_2026-01",
+    "roomId": "66b000000000000000000002",
+    "month": "2026-01",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000003_2026-01",
+    "roomId": "66b000000000000000000003",
+    "month": "2026-01",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000004_2026-01",
+    "roomId": "66b000000000000000000004",
+    "month": "2026-01",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000005_2026-01",
+    "roomId": "66b000000000000000000005",
+    "month": "2026-01",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000006_2026-01",
+    "roomId": "66b000000000000000000006",
+    "month": "2026-01",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000007_2026-01",
+    "roomId": "66b000000000000000000007",
+    "month": "2026-01",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000008_2026-01",
+    "roomId": "66b000000000000000000008",
+    "month": "2026-01",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000009_2026-01",
+    "roomId": "66b000000000000000000009",
+    "month": "2026-01",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000010_2026-01",
+    "roomId": "66b000000000000000000010",
+    "month": "2026-01",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000011_2026-01",
+    "roomId": "66b000000000000000000011",
+    "month": "2026-01",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000012_2026-01",
+    "roomId": "66b000000000000000000012",
+    "month": "2026-01",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000001_2025-12",
+    "roomId": "66b000000000000000000001",
+    "month": "2025-12",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000002_2025-12",
+    "roomId": "66b000000000000000000002",
+    "month": "2025-12",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000003_2025-12",
+    "roomId": "66b000000000000000000003",
+    "month": "2025-12",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000004_2025-12",
+    "roomId": "66b000000000000000000004",
+    "month": "2025-12",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000005_2025-12",
+    "roomId": "66b000000000000000000005",
+    "month": "2025-12",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000006_2025-12",
+    "roomId": "66b000000000000000000006",
+    "month": "2025-12",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000007_2025-12",
+    "roomId": "66b000000000000000000007",
+    "month": "2025-12",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000008_2025-12",
+    "roomId": "66b000000000000000000008",
+    "month": "2025-12",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000009_2025-12",
+    "roomId": "66b000000000000000000009",
+    "month": "2025-12",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000010_2025-12",
+    "roomId": "66b000000000000000000010",
+    "month": "2025-12",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000011_2025-12",
+    "roomId": "66b000000000000000000011",
+    "month": "2025-12",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000012_2025-12",
+    "roomId": "66b000000000000000000012",
+    "month": "2025-12",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000001_2025-11",
+    "roomId": "66b000000000000000000001",
+    "month": "2025-11",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000002_2025-11",
+    "roomId": "66b000000000000000000002",
+    "month": "2025-11",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000003_2025-11",
+    "roomId": "66b000000000000000000003",
+    "month": "2025-11",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000004_2025-11",
+    "roomId": "66b000000000000000000004",
+    "month": "2025-11",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000005_2025-11",
+    "roomId": "66b000000000000000000005",
+    "month": "2025-11",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000006_2025-11",
+    "roomId": "66b000000000000000000006",
+    "month": "2025-11",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000007_2025-11",
+    "roomId": "66b000000000000000000007",
+    "month": "2025-11",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000008_2025-11",
+    "roomId": "66b000000000000000000008",
+    "month": "2025-11",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000009_2025-11",
+    "roomId": "66b000000000000000000009",
+    "month": "2025-11",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000010_2025-11",
+    "roomId": "66b000000000000000000010",
+    "month": "2025-11",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000011_2025-11",
+    "roomId": "66b000000000000000000011",
+    "month": "2025-11",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  },
+  {
+    "_id": "inv_66b000000000000000000012_2025-11",
+    "roomId": "66b000000000000000000012",
+    "month": "2025-11",
+    "oldReading": 0,
+    "newReading": 0,
+    "extraFees": [
+      {
+        "name": "Phí sinh hoạt mỗi phòng",
+        "amount": 150000
+      }
+    ],
+    "paid": false,
+    "paidDate": null
+  }
+]
