@@ -1,4 +1,16 @@
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const getDefaultApiUrl = () => {
+  if (import.meta.env.VITE_API_URL) return import.meta.env.VITE_API_URL;
+  if (typeof window !== 'undefined') {
+    const host = window.location.hostname;
+    if (window.location.port === '5173') {
+      return `http://${host}:5000/api`;
+    }
+    return `${window.location.origin}/api`;
+  }
+  return 'http://localhost:5000/api';
+};
+
+const API_URL = getDefaultApiUrl();
 
 // --- BUILDINGS API ---
 export async function fetchBuildings() {
