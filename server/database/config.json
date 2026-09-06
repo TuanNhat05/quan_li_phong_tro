@@ -3,7 +3,12 @@
   "extraFeesDefault": [
     {
       "name": "Phí sinh hoạt mỗi phòng",
-      "amount": 150000
+      "amount": 150000,
+      "_id": "6a8413ef5b2e94d5d7b46f5d"
+    },
+    {
+      "name": "ghi chú p8 : 100k,   tiền móc khóa phòng 9: 60k",
+      "amount": 0
     }
   ]
 }

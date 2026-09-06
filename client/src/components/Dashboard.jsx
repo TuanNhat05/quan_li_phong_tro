@@ -1,10 +1,52 @@
 import React, { useState } from 'react';
-import { DollarSign, CheckCircle2, AlertCircle, Users, Home, ArrowRight, ChevronLeft, ChevronRight, Calendar } from 'lucide-react';
+import {
+  DollarSign,
+  CheckCircle2,
+  AlertCircle,
+  Users,
+  Home,
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+  Calendar,
+  Layers,
+  Wrench,
+  ArrowDownRight,
+  TrendingUp,
+  Sparkles,
+  Plus,
+  FileSpreadsheet
+} from 'lucide-react';
 import { formatVNMoney } from '../utils/formatters';
 import ConfirmModal from './ConfirmModal';
 
-export default function Dashboard({ data, rooms, selectedMonth, setSelectedMonth, onSelectRoom, onGoToInvoices, onPatchInvoice }) {
-  const { tongCanThu = 0, daThu = 0, conThieu = 0, danhSachPhongNo = [], roomStats = {} } = data || {};
+export default function Dashboard({
+  data,
+  rooms,
+  selectedMonth,
+  setSelectedMonth,
+  onSelectRoom,
+  onGoToInvoices,
+  onPatchInvoice,
+  onOpenAddExpense,
+  onGoToExpenses,
+  onExportExcel,
+  isExportingExcel = false
+}) {
+  const {
+    tongCanThu = 0,
+    daThu = 0,
+    conThieu = 0,
+    chiPhiCoDinh = 0,
+    chiPhiPhatSinh = 0,
+    tongChiPhi = 0,
+    loiNhuanDuKien = 0,
+    loiNhuanThucTe = 0,
+    tySuatLoiNhuan = 0,
+    expenses = [],
+    danhSachPhongNo = [],
+    roomStats = {}
+  } = data || {};
 
   const [confirmModal, setConfirmModal] = useState({
     isOpen: false,
@@ -78,7 +120,7 @@ export default function Dashboard({ data, rooms, selectedMonth, setSelectedMonth
             <span>{roomStats.occupiedCount || 0}/{roomStats.totalRooms || 12} Phòng có người ở</span>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
             <button className="btn btn-outline btn-sm" onClick={handlePrevMonth}>
               <ChevronLeft size={16} />
               <span>Tháng trước</span>
@@ -90,55 +132,362 @@ export default function Dashboard({ data, rooms, selectedMonth, setSelectedMonth
               <span>Tháng sau</span>
               <ChevronRight size={16} />
             </button>
+
+            {onExportExcel && (
+              <button
+                type="button"
+                className="btn btn-sm"
+                style={{
+                  backgroundColor: '#059669',
+                  borderColor: '#059669',
+                  color: '#ffffff',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  fontWeight: 600,
+                  boxShadow: '0 2px 4px rgba(5, 150, 105, 0.25)'
+                }}
+                onClick={onExportExcel}
+                disabled={isExportingExcel}
+                title="Xuất bảng thu tiền & chi phí ra file Excel theo mẫu chuẩn"
+              >
+                <FileSpreadsheet size={16} />
+                <span>{isExportingExcel ? 'Đang xuất...' : 'Xuất File Excel'}</span>
+              </button>
+            )}
           </div>
         </div>
       </div>
 
-      {/* 3 Metric Cards */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '16px' }}>
+      {/* 4 Financial Metric Cards */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
+        {/* Card 1: Tổng Cần Thu */}
         <div className="paper-card" style={{ borderLeft: '5px solid var(--teal-primary)' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-            <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-muted)', textTransform: 'uppercase' }}>TỔNG CẦN THU</span>
+            <span style={{ fontSize: '0.825rem', fontWeight: 600, color: 'var(--text-muted)', textTransform: 'uppercase' }}>
+              TỔNG CẦN THU (DOANH THU)
+            </span>
             <div style={{ padding: '8px', borderRadius: '8px', background: 'var(--teal-bg)', color: 'var(--teal-primary)' }}>
+              <TrendingUp size={20} />
+            </div>
+          </div>
+          <div className="font-mono" style={{ fontSize: '1.45rem', fontWeight: 700, color: 'var(--text-main)' }}>
+            {formatMoney(tongCanThu)}
+          </div>
+          <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '4px', display: 'flex', justifyContent: 'space-between' }}>
+            <span>Đã thu: <strong style={{ color: 'var(--emerald-primary)' }}>{formatMoney(daThu)}</strong></span>
+            <span>Nợ: <strong style={{ color: 'var(--rose-primary)' }}>{formatMoney(conThieu)}</strong></span>
+          </div>
+        </div>
+
+        {/* Card 2: Chi Phí Cố Định */}
+        <div className="paper-card" style={{ borderLeft: '5px solid var(--amber-primary)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+            <span style={{ fontSize: '0.825rem', fontWeight: 600, color: 'var(--text-muted)', textTransform: 'uppercase' }}>
+              CHI PHÍ CỐ ĐỊNH
+            </span>
+            <div style={{ padding: '8px', borderRadius: '8px', background: 'var(--amber-bg)', color: 'var(--amber-primary)' }}>
+              <Layers size={20} />
+            </div>
+          </div>
+          <div className="font-mono" style={{ fontSize: '1.45rem', fontWeight: 700, color: 'var(--amber-primary)' }}>
+            − {formatMoney(chiPhiCoDinh)}
+          </div>
+          <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '4px' }}>
+            Mặt bằng, Internet, Rác...
+          </div>
+        </div>
+
+        {/* Card 3: Chi Phí Phát Sinh */}
+        <div className="paper-card" style={{ borderLeft: '5px solid #7C3AED' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+            <span style={{ fontSize: '0.825rem', fontWeight: 600, color: 'var(--text-muted)', textTransform: 'uppercase' }}>
+              CHI PHÍ PHÁT SINH
+            </span>
+            <div style={{ padding: '8px', borderRadius: '8px', background: 'rgba(124, 58, 237, 0.12)', color: '#7C3AED' }}>
+              <Wrench size={20} />
+            </div>
+          </div>
+          <div className="font-mono" style={{ fontSize: '1.45rem', fontWeight: 700, color: '#7C3AED' }}>
+            − {formatMoney(chiPhiPhatSinh)}
+          </div>
+          <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '4px' }}>
+            Sửa điện nước, bóng đèn...
+          </div>
+        </div>
+
+        {/* Card 4: Lợi Nhuận Ròng Dự Kiến */}
+        <div
+          className="paper-card"
+          style={{
+            borderLeft: `5px solid ${loiNhuanDuKien >= 0 ? 'var(--emerald-primary)' : 'var(--rose-primary)'}`,
+            background: loiNhuanDuKien >= 0 ? 'rgba(5, 150, 105, 0.05)' : 'rgba(225, 29, 72, 0.05)'
+          }}
+        >
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+            <span style={{ fontSize: '0.825rem', fontWeight: 700, color: loiNhuanDuKien >= 0 ? 'var(--emerald-primary)' : 'var(--rose-primary)', textTransform: 'uppercase' }}>
+              LỢI NHUẬN RÒNG DỰ KIẾN
+            </span>
+            <div
+              style={{
+                padding: '8px',
+                borderRadius: '8px',
+                background: loiNhuanDuKien >= 0 ? 'var(--emerald-bg)' : 'var(--rose-bg)',
+                color: loiNhuanDuKien >= 0 ? 'var(--emerald-primary)' : 'var(--rose-primary)'
+              }}
+            >
               <DollarSign size={20} />
             </div>
           </div>
-          <div className="font-mono" style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--text-main)' }}>
-            {formatMoney(tongCanThu)}
+          <div
+            className="font-mono"
+            style={{
+              fontSize: '1.45rem',
+              fontWeight: 800,
+              color: loiNhuanDuKien >= 0 ? 'var(--emerald-primary)' : 'var(--rose-primary)'
+            }}
+          >
+            {formatMoney(loiNhuanDuKien)}
+          </div>
+          <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '4px' }}>
+            Thực tế đã cầm: <strong style={{ color: loiNhuanThucTe >= 0 ? 'var(--emerald-primary)' : 'var(--rose-primary)' }}>{formatMoney(loiNhuanThucTe)}</strong>
+          </div>
+        </div>
+      </div>
+
+      {/* Visual Cashflow Ledger & Expense Formula Section */}
+      <div className="paper-card" style={{ padding: '20px 24px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '12px' }}>
+          <div>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <Sparkles size={20} color="var(--teal-primary)" />
+              <span>Cân Đối Dòng Tiền & Tự Động Khấu Trừ Chi Phí</span>
+            </h3>
+            <p style={{ fontSize: '0.825rem', color: 'var(--text-muted)' }}>
+              Công thức hạch toán tự động lấy Tổng Cần Thu trừ đi Chi Phí Cố Định và Chi Phí Phát Sinh
+            </p>
+          </div>
+
+          <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' }}>
+            {onOpenAddExpense && (
+              <button
+                type="button"
+                className="btn btn-primary btn-sm"
+                style={{ backgroundColor: 'var(--teal-primary)', borderColor: 'var(--teal-primary)' }}
+                onClick={onOpenAddExpense}
+              >
+                <Plus size={15} />
+                <span>Thêm Khoản Chi</span>
+              </button>
+            )}
+
+            {onGoToExpenses && (
+              <button type="button" className="btn btn-outline btn-sm" onClick={onGoToExpenses}>
+                <span>Chi tiết chi phí</span>
+                <ArrowRight size={14} />
+              </button>
+            )}
           </div>
         </div>
 
-        <div className="paper-card" style={{ borderLeft: '5px solid var(--emerald-primary)' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-            <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-muted)', textTransform: 'uppercase' }}>ĐÃ THU TỔNG CỘNG</span>
-            <div style={{ padding: '8px', borderRadius: '8px', background: 'var(--emerald-bg)', color: 'var(--emerald-primary)' }}>
-              <CheckCircle2 size={20} />
-            </div>
+        {/* Visual Deduction Formula Banner */}
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: '10px',
+            padding: '14px 18px',
+            backgroundColor: 'var(--bg-paper-alt)',
+            borderRadius: '12px',
+            border: '1px solid var(--border-paper)',
+            marginBottom: '16px'
+          }}
+        >
+          {/* Tổng Thu */}
+          <div style={{ textAlign: 'center' }}>
+            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', display: 'block', fontWeight: 600 }}>TỔNG CẦN THU</span>
+            <span className="font-mono" style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--teal-primary)' }}>
+              {formatMoney(tongCanThu)}
+            </span>
           </div>
-          <div className="font-mono" style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--emerald-primary)' }}>
-            {formatMoney(daThu)}
+
+          <span style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-muted)' }}>−</span>
+
+          {/* Chi Cố Định */}
+          <div style={{ textAlign: 'center' }}>
+            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', display: 'block', fontWeight: 600 }}>CHI CỐ ĐỊNH</span>
+            <span className="font-mono" style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--amber-primary)' }}>
+              {formatMoney(chiPhiCoDinh)}
+            </span>
+          </div>
+
+          <span style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-muted)' }}>−</span>
+
+          {/* Chi Phát Sinh */}
+          <div style={{ textAlign: 'center' }}>
+            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', display: 'block', fontWeight: 600 }}>CHI PHÁT SINH</span>
+            <span className="font-mono" style={{ fontSize: '1.1rem', fontWeight: 700, color: '#7C3AED' }}>
+              {formatMoney(chiPhiPhatSinh)}
+            </span>
+          </div>
+
+          <span style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-muted)' }}>=</span>
+
+          {/* Lợi Nhuận Ròng */}
+          <div
+            style={{
+              textAlign: 'center',
+              padding: '6px 14px',
+              borderRadius: '8px',
+              backgroundColor: loiNhuanDuKien >= 0 ? 'var(--emerald-bg)' : 'var(--rose-bg)',
+              border: `1px solid ${loiNhuanDuKien >= 0 ? 'var(--emerald-primary)' : 'var(--rose-primary)'}`
+            }}
+          >
+            <span style={{ fontSize: '0.75rem', color: loiNhuanDuKien >= 0 ? 'var(--emerald-primary)' : 'var(--rose-primary)', display: 'block', fontWeight: 700 }}>
+              LỢI NHUẬN RÒNG
+            </span>
+            <span
+              className="font-mono"
+              style={{
+                fontSize: '1.25rem',
+                fontWeight: 800,
+                color: loiNhuanDuKien >= 0 ? 'var(--emerald-primary)' : 'var(--rose-primary)'
+              }}
+            >
+              {formatMoney(loiNhuanDuKien)}
+            </span>
           </div>
         </div>
 
-        <div className="paper-card" style={{ borderLeft: '5px solid var(--rose-primary)' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-            <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-muted)', textTransform: 'uppercase' }}>CÒN THIẾU (CHƯA THU)</span>
-            <div style={{ padding: '8px', borderRadius: '8px', background: 'var(--rose-bg)', color: 'var(--rose-primary)' }}>
-              <AlertCircle size={20} />
+        {/* Visual Progress Breakdown Bar */}
+        {tongCanThu > 0 && (
+          <div>
+            <div
+              style={{
+                height: '18px',
+                width: '100%',
+                backgroundColor: 'var(--bg-paper-alt)',
+                borderRadius: '9px',
+                overflow: 'hidden',
+                display: 'flex',
+                marginBottom: '10px'
+              }}
+            >
+              {chiPhiCoDinh > 0 && (
+                <div
+                  style={{
+                    width: `${Math.min(100, Math.round((chiPhiCoDinh / tongCanThu) * 100))}%`,
+                    backgroundColor: 'var(--amber-primary)',
+                    height: '100%'
+                  }}
+                  title={`Chi phí cố định: ${formatMoney(chiPhiCoDinh)}`}
+                />
+              )}
+              {chiPhiPhatSinh > 0 && (
+                <div
+                  style={{
+                    width: `${Math.min(100, Math.round((chiPhiPhatSinh / tongCanThu) * 100))}%`,
+                    backgroundColor: '#7C3AED',
+                    height: '100%'
+                  }}
+                  title={`Chi phí phát sinh: ${formatMoney(chiPhiPhatSinh)}`}
+                />
+              )}
+              {loiNhuanDuKien > 0 && (
+                <div
+                  style={{
+                    width: `${Math.max(0, 100 - Math.min(100, Math.round((tongChiPhi / tongCanThu) * 100)))}%`,
+                    backgroundColor: 'var(--emerald-primary)',
+                    height: '100%'
+                  }}
+                  title={`Lợi nhuận ròng: ${formatMoney(loiNhuanDuKien)}`}
+                />
+              )}
+            </div>
+
+            <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px', fontSize: '0.8rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <span style={{ width: '10px', height: '10px', borderRadius: '2px', backgroundColor: 'var(--amber-primary)', display: 'inline-block' }} />
+                <span>Chi phí cố định: <strong>{formatMoney(chiPhiCoDinh)}</strong> ({Math.round((chiPhiCoDinh / tongCanThu) * 100)}%)</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <span style={{ width: '10px', height: '10px', borderRadius: '2px', backgroundColor: '#7C3AED', display: 'inline-block' }} />
+                <span>Chi phí phát sinh: <strong>{formatMoney(chiPhiPhatSinh)}</strong> ({Math.round((chiPhiPhatSinh / tongCanThu) * 100)}%)</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <span style={{ width: '10px', height: '10px', borderRadius: '2px', backgroundColor: 'var(--emerald-primary)', display: 'inline-block' }} />
+                <span>Lợi nhuận thuần: <strong>{formatMoney(loiNhuanDuKien)}</strong> ({tySuatLoiNhuan}%)</span>
+              </div>
             </div>
           </div>
-          <div className="font-mono" style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--rose-primary)' }}>
-            {formatMoney(conThieu)}
+        )}
+
+        {/* Quick Recent Expenses List */}
+        {expenses && expenses.length > 0 && (
+          <div style={{ marginTop: '16px', paddingTop: '14px', borderTop: '1px solid var(--border-paper)' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+              <span style={{ fontSize: '0.825rem', fontWeight: 600, color: 'var(--text-muted)' }}>
+                Các khoản chi trong tháng ({expenses.length}):
+              </span>
+              {onGoToExpenses && (
+                <button
+                  type="button"
+                  onClick={onGoToExpenses}
+                  style={{ background: 'none', border: 'none', color: 'var(--teal-primary)', cursor: 'pointer', fontSize: '0.8rem', fontWeight: 600 }}
+                >
+                  Xem tất cả ({expenses.length}) ➔
+                </button>
+              )}
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '8px' }}>
+              {expenses.slice(0, 4).map((exp) => (
+                <div
+                  key={exp._id}
+                  style={{
+                    padding: '8px 12px',
+                    borderRadius: '8px',
+                    backgroundColor: 'var(--bg-paper-alt)',
+                    border: '1px solid var(--border-paper)',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center'
+                  }}
+                >
+                  <div style={{ overflow: 'hidden', paddingRight: '8px' }}>
+                    <div style={{ fontSize: '0.85rem', fontWeight: 600, textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' }}>
+                      {exp.title}
+                    </div>
+                    <span
+                      className={`badge ${exp.type === 'fixed' ? 'badge-amber' : ''}`}
+                      style={{
+                        fontSize: '0.65rem',
+                        padding: '1px 5px',
+                        backgroundColor: exp.type === 'fixed' ? undefined : 'rgba(124, 58, 237, 0.12)',
+                        color: exp.type === 'fixed' ? undefined : '#7C3AED'
+                      }}
+                    >
+                      {exp.type === 'fixed' ? 'Cố định' : 'Phát sinh'}
+                    </span>
+                  </div>
+                  <span className="font-mono" style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--rose-primary)', whiteSpace: 'nowrap' }}>
+                    − {formatMoney(exp.amount)}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
 
       {/* Grid of 12 Rooms Status Map */}
       <div className="paper-card">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
-          <h3 style={{ fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <h3 style={{ fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
             <Home size={20} color="var(--teal-primary)" />
-            <span>Sơ Đồ 12 Phòng Trọ</span>
+            <span>Sơ Đồ {rooms.length} Phòng Trọ</span>
           </h3>
           <div style={{ display: 'flex', gap: '8px' }}>
             <span className="badge badge-teal">● Đang ở ({roomStats.occupiedCount || 0})</span>
@@ -149,7 +498,9 @@ export default function Dashboard({ data, rooms, selectedMonth, setSelectedMonth
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '12px' }}>
           {rooms.map((room) => {
             const isOccupied = room.status === 'occupied';
-            const unpaidInfo = danhSachPhongNo.find((item) => item.roomId === room._id);
+            const unpaidInfo = danhSachPhongNo.find((item) =>
+              item.roomId === room._id || item.roomId?.toString() === room._id?.toString()
+            );
 
             return (
               <div
@@ -285,4 +636,3 @@ export default function Dashboard({ data, rooms, selectedMonth, setSelectedMonth
     </div>
   );
 }
-

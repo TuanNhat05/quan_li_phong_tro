@@ -1,10 +1,9 @@
 const currentMonth = new Date().toISOString().slice(0, 7);
 
 let configStore = {
-  giaDien: 3500,
+  giaDien: 3800,
   extraFeesDefault: [
-    { name: 'Rác sinh hoạt', amount: 30000 },
-    { name: 'Internet / Wifi', amount: 100000 }
+    { name: 'Phí sinh hoạt mỗi phòng', amount: 150000 }
   ]
 };
 
@@ -30,8 +29,7 @@ let invoicesStore = roomsStore.map((room, idx) => ({
   oldReading: room.status === 'occupied' ? 100 * (idx + 1) : 0,
   newReading: room.status === 'occupied' ? 100 * (idx + 1) + 45 : 0,
   extraFees: [
-    { name: 'Rác sinh hoạt', amount: 30000 },
-    { name: 'Internet / Wifi', amount: 100000 }
+    { name: 'Phí sinh hoạt mỗi phòng', amount: 150000 }
   ],
   paid: idx === 0 || idx === 1,
   paidDate: idx === 0 || idx === 1 ? new Date() : null

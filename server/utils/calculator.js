@@ -47,7 +47,10 @@ function calculateInvoiceDetails(invoiceDoc, roomDoc, configDoc) {
     parkingAmountTotal = 0;
   }
 
-  const extraFees = Array.isArray(invoice.extraFees) ? invoice.extraFees : [];
+  // Luôn lấy phí dịch vụ từ cài đặt (config) để áp dụng đồng nhất mọi tháng
+  const extraFees = Array.isArray(configDoc?.extraFeesDefault) && configDoc.extraFeesDefault.length > 0
+    ? configDoc.extraFeesDefault
+    : (Array.isArray(invoice.extraFees) ? invoice.extraFees : []);
   const extraFeesTotal = extraFees.reduce((sum, fee) => sum + (Number(fee.amount) || 0), 0);
 
   const baseRent = Number(room.baseRent) || 0;

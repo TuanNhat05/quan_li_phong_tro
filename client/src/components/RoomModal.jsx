@@ -52,11 +52,11 @@ export default function RoomModal({ room, onClose, onSave }) {
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()} style={{ maxWidth: '550px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', paddingBottom: '12px', borderBottom: '1px solid var(--border-paper)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <Key color="var(--teal-primary)" size={22} />
-            <h3 style={{ fontSize: '1.2rem', margin: 0 }}>Cập Nhật Information {room.name}</h3>
+            <h3 style={{ fontSize: '1.2rem', margin: 0 }}>Cập Nhật Thông Tin {room.name}</h3>
           </div>
           <button onClick={onClose} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)' }}>
             <X size={20} />
@@ -125,9 +125,9 @@ export default function RoomModal({ room, onClose, onSave }) {
           </div>
 
           <div className="form-group">
-            <label className="form-label" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <label className="form-label" style={{ display: 'flex', justifyContent: 'space-between' }}>
               <span>Giá thuê cố định / tháng (VNĐ)</span>
-              <span style={{ fontSize: '0.825rem', color: 'var(--teal-primary)', fontWeight: 700 }}>
+              <span className="font-mono" style={{ color: 'var(--teal-primary)', fontWeight: 600 }}>
                 {formatVNMoney(formData.baseRent)}
               </span>
             </label>
@@ -156,9 +156,9 @@ export default function RoomModal({ room, onClose, onSave }) {
             </div>
 
             <div className="form-group">
-              <label className="form-label" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <label className="form-label" style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <span>Đơn giá nước (VNĐ)</span>
-                <span style={{ fontSize: '0.825rem', color: 'var(--teal-primary)', fontWeight: 700 }}>
+                <span className="font-mono" style={{ color: 'var(--teal-primary)', fontWeight: 600 }}>
                   {formatVNMoney(formData.waterAmount)}
                 </span>
               </label>
@@ -174,7 +174,7 @@ export default function RoomModal({ room, onClose, onSave }) {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: formData.parkingMode !== 'none' ? '1fr 1fr' : '1fr', gap: '12px', marginTop: '12px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: formData.parkingMode !== 'none' ? '1fr 1fr' : '1fr', gap: '12px', marginTop: '8px' }}>
             <div className="form-group">
               <label className="form-label">Cách tính tiền giữ xe</label>
               <select
@@ -191,9 +191,9 @@ export default function RoomModal({ room, onClose, onSave }) {
 
             {formData.parkingMode !== 'none' && (
               <div className="form-group">
-                <label className="form-label" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <label className="form-label" style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <span>Đơn giá xe (VNĐ)</span>
-                  <span style={{ fontSize: '0.825rem', color: 'var(--teal-primary)', fontWeight: 700 }}>
+                  <span className="font-mono" style={{ color: 'var(--teal-primary)', fontWeight: 600 }}>
                     {formatVNMoney(formData.parkingAmount)}
                   </span>
                 </label>
@@ -210,8 +210,8 @@ export default function RoomModal({ room, onClose, onSave }) {
           </div>
 
           {formData.parkingMode !== 'none' && (
-            <div className="form-group" style={{ marginTop: '12px' }}>
-              <label className="form-label" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div className="form-group" style={{ marginTop: '4px' }}>
+              <label className="form-label" style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <span>Số lượng xe</span>
                 {formData.parkingMode === 'perVehicle' && (
                   <span style={{ fontSize: '0.75rem', color: 'var(--teal-primary)', fontWeight: 600 }}>
@@ -219,7 +219,7 @@ export default function RoomModal({ room, onClose, onSave }) {
                   </span>
                 )}
               </label>
-              <div style={{ display: 'flex', gap: '6px', marginBottom: '8px' }}>
+              <div style={{ display: 'flex', gap: '6px', marginBottom: '6px' }}>
                 {[0, 1, 2, 3, 4, 5].map((num) => (
                   <button
                     key={num}
@@ -227,9 +227,9 @@ export default function RoomModal({ room, onClose, onSave }) {
                     className={`btn btn-sm ${formData.soXe === num ? 'btn-primary' : 'btn-outline'}`}
                     style={{
                       flex: 1,
-                      padding: '6px 0',
+                      padding: '4px 0',
                       fontSize: '0.85rem',
-                      fontWeight: formData.soXe === num ? 700 : 500
+                      fontWeight: formData.soXe === num ? 700 : 400
                     }}
                     onClick={() => setFormData({ ...formData, soXe: num })}
                   >
@@ -248,7 +248,7 @@ export default function RoomModal({ room, onClose, onSave }) {
             </div>
           )}
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginTop: '12px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginTop: '8px' }}>
             <div className="form-group">
               <label className="form-label">Ngày bắt đầu hợp đồng</label>
               <input
@@ -270,11 +270,11 @@ export default function RoomModal({ room, onClose, onSave }) {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginTop: '12px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginTop: '8px' }}>
             <div className="form-group">
-              <label className="form-label" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <label className="form-label" style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <span>Tiền cọc (VNĐ)</span>
-                <span style={{ fontSize: '0.825rem', color: 'var(--teal-primary)', fontWeight: 700 }}>
+                <span className="font-mono" style={{ color: 'var(--amber-primary)', fontWeight: 600 }}>
                   {formatVNMoney(formData.deposit)}
                 </span>
               </label>
@@ -301,7 +301,7 @@ export default function RoomModal({ room, onClose, onSave }) {
             </div>
           </div>
 
-          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px', marginTop: '24px' }}>
+          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px', marginTop: '20px' }}>
             <button type="button" className="btn btn-outline" onClick={onClose}>
               Hủy bỏ
             </button>

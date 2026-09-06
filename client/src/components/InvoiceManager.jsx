@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Calendar, CheckCircle2, XCircle, Edit, Zap, Droplet, PlusCircle, Printer } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Calendar, CheckCircle2, XCircle, Edit, Zap, Droplet, PlusCircle, Printer, FileSpreadsheet } from 'lucide-react';
 import { formatVNMoney } from '../utils/formatters';
 import ConfirmModal from './ConfirmModal';
 
-// Format raw 6-digit meter value to display (e.g., 099390 → "09939.0")
 function formatMeterDisplay(rawValue) {
   const num = Number(rawValue) || 0;
   const str = String(num).padStart(6, '0');
@@ -11,7 +10,6 @@ function formatMeterDisplay(rawValue) {
 }
 
 function ReadingInput({ value, onSave }) {
-  // Store as 6-digit string (e.g., "099390")
   const [val, setVal] = useState(() => String(value ?? 0).padStart(6, '0'));
 
   useEffect(() => {
@@ -26,7 +24,6 @@ function ReadingInput({ value, onSave }) {
   };
 
   const handleChange = (e) => {
-    // Only allow digits, max 6 characters
     const raw = e.target.value.replace(/\D/g, '').slice(0, 6);
     setVal(raw);
   };
@@ -56,7 +53,9 @@ export default function InvoiceManager({
   config,
   onPatchInvoice,
   onOpenExtraFeesModal,
-  onOpenReceiptModal
+  onOpenReceiptModal,
+  onExportExcel,
+  isExportingExcel = false
 }) {
   const formatMoney = formatVNMoney;
 
@@ -68,7 +67,6 @@ export default function InvoiceManager({
     roomId: ''
   });
 
-  // Navigate Months
   const handlePrevMonth = () => {
     const [yearStr, mStr] = selectedMonth.split('-');
     let year = parseInt(yearStr, 10);
@@ -114,7 +112,7 @@ export default function InvoiceManager({
           </p>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
           <button className="btn btn-outline btn-sm" onClick={handlePrevMonth}>
             <ChevronLeft size={16} />
             <span>Tháng trước</span>
@@ -126,11 +124,34 @@ export default function InvoiceManager({
             <span>Tháng sau</span>
             <ChevronRight size={16} />
           </button>
+
+          {onExportExcel && (
+            <button
+              type="button"
+              className="btn btn-sm"
+              style={{
+                backgroundColor: '#059669',
+                borderColor: '#059669',
+                color: '#ffffff',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                fontWeight: 600,
+                boxShadow: '0 2px 4px rgba(5, 150, 105, 0.25)'
+              }}
+              onClick={onExportExcel}
+              disabled={isExportingExcel}
+              title="Xuất bảng thu tiền & chi phí ra file Excel theo mẫu chuẩn"
+            >
+              <FileSpreadsheet size={16} />
+              <span>{isExportingExcel ? 'Đang xuất...' : 'Xuất File Excel'}</span>
+            </button>
+          )}
         </div>
       </div>
 
       {/* Invoice Table */}
-      <div className="ledger-table-container">
+      <div className="ledger-table-container" style={{ maxHeight: 'calc(100vh - 260px)', overflowY: 'auto' }}>
         <table className="ledger-table">
           <thead>
             <tr>
@@ -141,7 +162,7 @@ export default function InvoiceManager({
               <th style={{ width: '95px' }}>Tiền điện</th>
               <th style={{ width: '95px' }}>Tiền nước</th>
               <th style={{ width: '95px' }}>Tiền xe</th>
-              <th style={{ width: '95px' }}>Phí khác</th>
+              <th style={{ width: '95px' }}>Phí dịch vụ</th>
               <th style={{ width: '110px' }}>TỔNG CỘNG</th>
               <th style={{ width: '150px', textAlign: 'center' }}>Thao tác</th>
             </tr>
@@ -150,7 +171,7 @@ export default function InvoiceManager({
             {invoices.length === 0 ? (
               <tr>
                 <td colSpan="10" style={{ textAlign: 'center', padding: '32px', color: 'var(--text-muted)' }}>
-                  Đang tải dữ liệu hóa đơn...
+                  Không có hóa đơn nào cho tháng {selectedMonth}. Vui lòng chọn căn nhà hoặc kiểm tra lại.
                 </td>
               </tr>
             ) : (
@@ -189,7 +210,7 @@ export default function InvoiceManager({
                         />
                       </div>
                       <div style={{ fontSize: '0.725rem', color: 'var(--text-muted)', marginTop: '2px' }}>
-                        {formatMeterDisplay(item.oldReading)} ➜ {formatMeterDisplay(item.newReading)} = <strong>{item.kwhUsed} kWh</strong>
+                        {formatMeterDisplay(item.oldReading)} ➔ {formatMeterDisplay(item.newReading)} = <strong>{item.kwhUsed} kWh</strong>
                       </div>
                     </td>
 
@@ -238,7 +259,7 @@ export default function InvoiceManager({
                       {formatMoney(item.totalAmount)}
                     </td>
 
-                    {/* Action Buttons: Payment Toggle & Print Receipt */}
+                    {/* Action Buttons */}
                     <td>
                       <div style={{ display: 'flex', gap: '6px', justifyContent: 'center' }}>
                         <button
@@ -312,4 +333,3 @@ export default function InvoiceManager({
     </div>
   );
 }
-

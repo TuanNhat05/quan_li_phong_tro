@@ -35,7 +35,7 @@ export default function ExtraFeesModal({ invoice, onClose, onSave }) {
   if (!invoice) return null;
 
   const totalExtra = fees.reduce((sum, f) => sum + (Number(f.amount) || 0), 0);
-  const formatMoney = (val) => new Intl.NumberFormat('vi-VN').format(val || 0) + ' đ';
+  const formatMoney = (val) => new Intl.NumberFormat('vi-VN').format(val || 0) + 'đ';
 
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -43,7 +43,7 @@ export default function ExtraFeesModal({ invoice, onClose, onSave }) {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', paddingBottom: '12px', borderBottom: '1px solid var(--border-paper)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <FileSpreadsheet color="var(--teal-primary)" size={22} />
-            <h3 style={{ fontSize: '1.2rem', margin: 0 }}>Phí Phụ Thu - {invoice.room?.name}</h3>
+            <h3 style={{ fontSize: '1.2rem', margin: 0 }}>Phụ Thu - {invoice.room?.name}</h3>
           </div>
           <button onClick={onClose} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)' }}>
             <X size={20} />

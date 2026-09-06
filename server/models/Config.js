@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const configSchema = new mongoose.Schema(
   {
+    buildingId: { type: mongoose.Schema.Types.ObjectId, ref: 'Building', required: true, unique: true },
     giaDien: { type: Number, default: 3500, min: 0 },
     extraFeesDefault: [
       {
