@@ -160,10 +160,13 @@ export default function ExpensesManager({
 
       {/* 5 Financial Summary Metric Cards */}
       <div
+        className="dashboard-metrics-grid"
         style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-          gap: '16px'
+          gap: '16px',
+          width: '100%',
+          boxSizing: 'border-box'
         }}
       >
         {/* 1. Tổng Cần Thu */}
@@ -176,7 +179,7 @@ export default function ExpensesManager({
               <TrendingUp size={18} />
             </div>
           </div>
-          <div className="font-mono" style={{ fontSize: '1.45rem', fontWeight: 700, color: 'var(--text-main)' }}>
+          <div className="font-mono" style={{ fontSize: 'clamp(1.15rem, 3.5vw, 1.45rem)', fontWeight: 700, color: 'var(--text-main)', wordBreak: 'break-word' }}>
             {formatVNMoney(tongCanThu)}
           </div>
           <div style={{ fontSize: '0.78rem', color: 'var(--emerald-primary)', marginTop: '4px' }}>
@@ -194,7 +197,7 @@ export default function ExpensesManager({
               <Layers size={18} />
             </div>
           </div>
-          <div className="font-mono" style={{ fontSize: '1.45rem', fontWeight: 700, color: 'var(--amber-primary)' }}>
+          <div className="font-mono" style={{ fontSize: 'clamp(1.15rem, 3.5vw, 1.45rem)', fontWeight: 700, color: 'var(--amber-primary)', wordBreak: 'break-word' }}>
             {formatVNMoney(chiPhiCoDinh)}
           </div>
           <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '4px' }}>
@@ -212,7 +215,7 @@ export default function ExpensesManager({
               <Wrench size={18} />
             </div>
           </div>
-          <div className="font-mono" style={{ fontSize: '1.45rem', fontWeight: 700, color: '#7C3AED' }}>
+          <div className="font-mono" style={{ fontSize: 'clamp(1.15rem, 3.5vw, 1.45rem)', fontWeight: 700, color: '#7C3AED', wordBreak: 'break-word' }}>
             {formatVNMoney(chiPhiPhatSinh)}
           </div>
           <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '4px' }}>
@@ -230,7 +233,7 @@ export default function ExpensesManager({
               <ArrowDownRight size={18} />
             </div>
           </div>
-          <div className="font-mono" style={{ fontSize: '1.45rem', fontWeight: 700, color: 'var(--rose-primary)' }}>
+          <div className="font-mono" style={{ fontSize: 'clamp(1.15rem, 3.5vw, 1.45rem)', fontWeight: 700, color: 'var(--rose-primary)', wordBreak: 'break-word' }}>
             {formatVNMoney(tongChiPhi)}
           </div>
           <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '4px' }}>
@@ -264,9 +267,10 @@ export default function ExpensesManager({
           <div
             className="font-mono"
             style={{
-              fontSize: '1.55rem',
+              fontSize: 'clamp(1.15rem, 3.5vw, 1.45rem)',
               fontWeight: 800,
-              color: loiNhuanDuKien >= 0 ? 'var(--emerald-primary)' : 'var(--rose-primary)'
+              color: loiNhuanDuKien >= 0 ? 'var(--emerald-primary)' : 'var(--rose-primary)',
+              wordBreak: 'break-word'
             }}
           >
             {formatVNMoney(loiNhuanDuKien)}
@@ -373,9 +377,9 @@ export default function ExpensesManager({
             gap: '12px'
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flex: 1, minWidth: '280px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flex: 1, flexWrap: 'wrap', width: '100%', minWidth: 0 }}>
             {/* Search */}
-            <div style={{ position: 'relative', flex: 1 }}>
+            <div style={{ position: 'relative', flex: 1, minWidth: '180px' }}>
               <Search
                 size={16}
                 color="var(--text-muted)"
@@ -384,7 +388,7 @@ export default function ExpensesManager({
               <input
                 type="text"
                 className="form-input"
-                style={{ paddingLeft: '36px', height: '38px', fontSize: '0.875rem' }}
+                style={{ paddingLeft: '36px', height: '38px', fontSize: '0.875rem', width: '100%' }}
                 placeholder="Tìm khoản chi theo tên hoặc ghi chú..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
@@ -392,7 +396,7 @@ export default function ExpensesManager({
             </div>
 
             {/* Type Filter Buttons */}
-            <div style={{ display: 'flex', gap: '4px' }}>
+            <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
               <button
                 type="button"
                 className={`btn btn-sm ${filterType === 'all' ? 'btn-primary' : 'btn-outline'}`}
@@ -419,7 +423,7 @@ export default function ExpensesManager({
             </div>
           </div>
 
-          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', width: '100%' }}>
             {onCopyRecurring && (
               <button
                 type="button"

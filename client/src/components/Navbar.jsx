@@ -63,7 +63,7 @@ export default function Navbar({
   };
 
   return (
-    <header style={{
+    <header className="app-header" style={{
       backgroundColor: 'rgba(255,255,255,0.06)',
       backdropFilter: 'blur(10px)',
       WebkitBackdropFilter: 'blur(10px)',
@@ -71,9 +71,14 @@ export default function Navbar({
       boxShadow: '0 4px 24px rgba(13,148,136,0.06)',
       position: 'sticky',
       top: 0,
+      left: 0,
+      right: 0,
+      width: '100%',
+      minWidth: '100%',
+      boxSizing: 'border-box',
       zIndex: 100
     }}>
-      <div className="app-container" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+      <div className="app-container" style={{ display: 'flex', flexDirection: 'column', gap: '10px', width: '100%', boxSizing: 'border-box' }}>
 
         {/* ── Top Row: Logo + Clock + Hamburger ── */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '10px' }}>

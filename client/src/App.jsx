@@ -311,11 +311,11 @@ export default function App() {
   };
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', position: 'relative', backgroundColor: 'transparent' }}>
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', position: 'relative', backgroundColor: 'transparent', width: '100%', maxWidth: '100vw', overflowX: 'hidden' }}>
       {/* AI Neural Network Background Animation */}
       <AIBackground />
       {/* Content Layer - above canvas */}
-      <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', minHeight: '100vh', width: '100%', maxWidth: '100vw', overflowX: 'hidden' }}>
       <Navbar
         activeTab={activeTab}
         setActiveTab={setActiveTab}
@@ -333,7 +333,7 @@ export default function App() {
         onDeleteBuilding={handleDeleteBuilding}
       />
 
-      <main className="app-container" style={{ flex: 1, paddingBottom: '40px', marginTop: '20px' }}>
+      <main className="app-container" style={{ flex: 1, paddingBottom: '40px', marginTop: '20px', width: '100%', maxWidth: '100%', boxSizing: 'border-box', minWidth: 0, overflowX: 'hidden' }}>
         {activeTab === 'dashboard' && (
           <Dashboard
             data={dashboardData}

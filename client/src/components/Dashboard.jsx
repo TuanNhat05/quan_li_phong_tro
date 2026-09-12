@@ -120,7 +120,7 @@ export default function Dashboard({
             <span>{roomStats.occupiedCount || 0}/{roomStats.totalRooms || 12} Phòng có người ở</span>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
+          <div className="dashboard-month-actions" style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
             <button className="btn btn-outline btn-sm" onClick={handlePrevMonth}>
               <ChevronLeft size={16} />
               <span>Tháng trước</span>
@@ -160,7 +160,7 @@ export default function Dashboard({
       </div>
 
       {/* 4 Financial Metric Cards */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
+      <div className="dashboard-metrics-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
         {/* Card 1: Tổng Cần Thu */}
         <div className="paper-card" style={{ borderLeft: '5px solid var(--teal-primary)' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
@@ -171,10 +171,10 @@ export default function Dashboard({
               <TrendingUp size={20} />
             </div>
           </div>
-          <div className="font-mono" style={{ fontSize: '1.45rem', fontWeight: 700, color: 'var(--text-main)' }}>
+          <div className="font-mono" style={{ fontSize: 'clamp(1.15rem, 3.5vw, 1.45rem)', fontWeight: 700, color: 'var(--text-main)', wordBreak: 'break-word' }}>
             {formatMoney(tongCanThu)}
           </div>
-          <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '4px', display: 'flex', justifyContent: 'space-between' }}>
+          <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '4px', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '4px' }}>
             <span>Đã thu: <strong style={{ color: 'var(--emerald-primary)' }}>{formatMoney(daThu)}</strong></span>
             <span>Nợ: <strong style={{ color: 'var(--rose-primary)' }}>{formatMoney(conThieu)}</strong></span>
           </div>
@@ -190,7 +190,7 @@ export default function Dashboard({
               <Layers size={20} />
             </div>
           </div>
-          <div className="font-mono" style={{ fontSize: '1.45rem', fontWeight: 700, color: 'var(--amber-primary)' }}>
+          <div className="font-mono" style={{ fontSize: 'clamp(1.15rem, 3.5vw, 1.45rem)', fontWeight: 700, color: 'var(--amber-primary)', wordBreak: 'break-word' }}>
             − {formatMoney(chiPhiCoDinh)}
           </div>
           <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '4px' }}>
@@ -208,7 +208,7 @@ export default function Dashboard({
               <Wrench size={20} />
             </div>
           </div>
-          <div className="font-mono" style={{ fontSize: '1.45rem', fontWeight: 700, color: '#7C3AED' }}>
+          <div className="font-mono" style={{ fontSize: 'clamp(1.15rem, 3.5vw, 1.45rem)', fontWeight: 700, color: '#7C3AED', wordBreak: 'break-word' }}>
             − {formatMoney(chiPhiPhatSinh)}
           </div>
           <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '4px' }}>
@@ -242,9 +242,10 @@ export default function Dashboard({
           <div
             className="font-mono"
             style={{
-              fontSize: '1.45rem',
+              fontSize: 'clamp(1.15rem, 3.5vw, 1.45rem)',
               fontWeight: 800,
-              color: loiNhuanDuKien >= 0 ? 'var(--emerald-primary)' : 'var(--rose-primary)'
+              color: loiNhuanDuKien >= 0 ? 'var(--emerald-primary)' : 'var(--rose-primary)',
+              wordBreak: 'break-word'
             }}
           >
             {formatMoney(loiNhuanDuKien)}
@@ -292,6 +293,7 @@ export default function Dashboard({
 
         {/* Visual Deduction Formula Banner */}
         <div
+          className="dashboard-formula-banner"
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -302,7 +304,9 @@ export default function Dashboard({
             backgroundColor: 'var(--bg-paper-alt)',
             borderRadius: '12px',
             border: '1px solid var(--border-paper)',
-            marginBottom: '16px'
+            marginBottom: '16px',
+            width: '100%',
+            boxSizing: 'border-box'
           }}
         >
           {/* Tổng Thu */}
@@ -313,7 +317,7 @@ export default function Dashboard({
             </span>
           </div>
 
-          <span style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-muted)' }}>−</span>
+          <span className="formula-operator" style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-muted)' }}>−</span>
 
           {/* Chi Cố Định */}
           <div style={{ textAlign: 'center' }}>
@@ -323,7 +327,7 @@ export default function Dashboard({
             </span>
           </div>
 
-          <span style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-muted)' }}>−</span>
+          <span className="formula-operator" style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-muted)' }}>−</span>
 
           {/* Chi Phát Sinh */}
           <div style={{ textAlign: 'center' }}>
@@ -333,7 +337,7 @@ export default function Dashboard({
             </span>
           </div>
 
-          <span style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-muted)' }}>=</span>
+          <span className="formula-operator" style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-muted)' }}>=</span>
 
           {/* Lợi Nhuận Ròng */}
           <div
@@ -442,7 +446,7 @@ export default function Dashboard({
               )}
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '8px' }}>
+            <div className="dashboard-quick-expenses-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '8px', width: '100%', boxSizing: 'border-box' }}>
               {expenses.slice(0, 4).map((exp) => (
                 <div
                   key={exp._id}
@@ -495,7 +499,7 @@ export default function Dashboard({
           </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '12px' }}>
+        <div className="rooms-status-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', gap: '12px' }}>
           {rooms.map((room) => {
             const isOccupied = room.status === 'occupied';
             const unpaidInfo = danhSachPhongNo.find((item) =>
