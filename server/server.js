@@ -15,25 +15,9 @@ const expensesRouter = require('./routes/expenses');
 const app = express();
 const server = http.createServer(app);
 
-// Enable CORS
-const allowedOrigins = process.env.CLIENT_URL
-  ? process.env.CLIENT_URL.split(',').map(o => o.trim())
-  : ['http://localhost:5173', 'http://localhost:3000'];
-
-const isOriginAllowed = (origin) => {
-  if (!origin) return true;
-  if (allowedOrigins.includes(origin) || allowedOrigins.includes('*')) return true;
-  if (origin.endsWith('.onrender.com') || origin.endsWith('.vercel.app')) return true;
-  return false;
-};
-
+// Enable CORS - allow all origins dynamically (Cloudflare tunnel, LAN, Render, Vercel, Localhost)
 app.use(cors({
-  origin: function (origin, callback) {
-    if (isOriginAllowed(origin)) {
-      return callback(null, true);
-    }
-    return callback(new Error('Not allowed by CORS'));
-  },
+  origin: true,
   credentials: true
 }));
 app.use(express.json());
@@ -41,12 +25,7 @@ app.use(express.json());
 // Socket.io Setup
 const io = new Server(server, {
   cors: {
-    origin: (origin, callback) => {
-      if (isOriginAllowed(origin)) {
-        return callback(null, true);
-      }
-      return callback(new Error('Not allowed by CORS'));
-    },
+    origin: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
     credentials: true
   }
