@@ -3,7 +3,8 @@ const http = require('http');
 const { Server } = require('socket.io');
 const mongoose = require('mongoose');
 const cors = require('cors');
-require('dotenv').config();
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '.env') });
 
 const roomsRouter = require('./routes/rooms');
 const configRouter = require('./routes/config');
@@ -58,7 +59,6 @@ app.get('/api/health', (req, res) => {
 
 
 // Serve static client build if dist folder exists (e.g. combined deployment)
-const path = require('path');
 const fs = require('fs');
 const clientDistPath = path.join(__dirname, '../client/dist');
 if (fs.existsSync(clientDistPath)) {
