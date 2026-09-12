@@ -77,7 +77,7 @@ const MONGODB_URI = process.env.MONGODB_URI || process.env.MONGO_URL;
 async function startServer() {
   if (!MONGODB_URI) {
     console.error('❌ Lỗi: Thiếu MONGODB_URI trong file .env');
-    process.exit(1);
+    // process.exit(1);
   }
 
   try {
@@ -87,7 +87,7 @@ async function startServer() {
     console.log('✅ ĐÃ KẾT NỐI MONGODB CLOUD THÀNH CÔNG!');
   } catch (err) {
     console.error('❌ Không thể kết nối MongoDB Cloud:', err.message);
-    process.exit(1);
+    // process.exit(1);
   }
 
   server.on('error', (err) => {
